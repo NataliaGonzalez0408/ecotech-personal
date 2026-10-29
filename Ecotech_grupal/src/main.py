@@ -9,28 +9,28 @@ crear_tablas()
 
 
 
-emp=Empleado(nombre="admin", correo="admin@admin.com", telefono="" , fecha_inicio_contrato="" , salario="" )
-EmpleadoDAO.insertar(emp)
+# emp=Empleado(nombre="admin", correo="admin@admin.com", telefono="" , fecha_inicio_contrato="" , salario="" )
+# EmpleadoDAO.insertar(emp)
 
-user=registrar_usuario(emp.id, "admin","admin123321")
+# user=registrar_usuario(emp.id, "admin","admin12332")
 
-print(emp.mostrar_datos())
-print(user)
-
-
-# def main():
-#     while True:
-#         usuario_actual = solicitar_login()
-#         if usuario_actual is None:
-#             if input("Enter para reintentar o 0 para salir: ") == "0":
-#                 return
-#             continue
-#         opcion = menu_privado(usuario_actual)
-#         usuario_actual = None # Terminar el acceso de esta sesión.
-#         if opcion == "0":
-#             return
-#         print("Sesión cerrada. Ingrese nuevamente.")
+# print(emp.mostrar_datos())
+# print(user)
 
 
-# if __name__ == "__main__":
-#     main()
+def main():
+    while True:
+        usuario_actual = solicitar_login()
+        if usuario_actual is None:
+            if input("Enter para reintentar o 0 para salir: ") == "0":
+                return
+            continue
+        opcion = menu_privado(usuario_actual)
+        usuario_actual = None # Terminar el acceso de esta sesión.
+        if opcion == "0":
+            return
+        print("Sesión cerrada. Ingrese nuevamente.")
+
+
+if __name__ == "__main__":
+    main()
